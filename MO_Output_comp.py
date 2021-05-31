@@ -7,10 +7,10 @@ def listPatternFiles(searchDir, pattern):
     files = glob.glob(os.path.join(searchDir, pattern))
     
 def comp_type(output_df_type,ref_df_type):  
-    return (output_df.dtypes.values == input_df.dtypes.values).all()
+    return (output_df_type.dtypes.values == input_df_type.dtypes.values).all()
     
 def comp_names(output_df_col,ref_df_col):
-    return (output_df.columns == ref_df.columns).all()
+    return (output_df_col.columns == ref_df_col.columns).all()
 
     
 def is_equal(output_df,ref_df):
